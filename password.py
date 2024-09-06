@@ -51,15 +51,15 @@ gen_password = generate_password()
 salt = generate_random_salt()
 print(f"SALT: {salt}\n") 
 
-print(f"RANDOMLY PASSWORD: {gen_password}\n") 
+print(f"RANDOMLY GENERATED PASSWORD: {gen_password}\n") 
 
-print(f"MD5 PASSWORD: {generate_password_md5(gen_password, salt)}\n")
+print(f"MD5 HASH: {generate_password_md5(gen_password, salt)}\n")
 
-print(f"SHA256 PASSWORD: {generate_password_sha256(gen_password, salt)}\n")
+print(f"SHA256 HASH: {generate_password_sha256(gen_password, salt)}\n")
 
-print(f"HMAC PASSWORD: {generate_password_hmac(gen_password, salt)}\n")
+print(f"HMAC HASH: {generate_password_hmac(gen_password, salt)}\n")
 
-print(f"BCRYPT PASSWORD: {generate_password_bcrypt(gen_password)}")
+print(f"BCRYPT HASH: {generate_password_bcrypt(gen_password)}")
 
 
 
