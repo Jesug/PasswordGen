@@ -3,10 +3,11 @@ import string
 
 def generate_password (length = 12):
     alphanumeric = string.ascii_letters + string.punctuation + string.digits 
-    password = ''.join(random.choice(alphanumeric) for i in range (length))
-    return password
+    gen_password = ''.join(random.choice(alphanumeric) for i in range (length))
+    return gen_password
 
 
-password = generate_password()
-print("Generated Password: " + password)
+gen_password = generate_password()
+print("Password: " + gen_password)
+ 
  
