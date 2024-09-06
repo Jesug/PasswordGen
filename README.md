@@ -1,11 +1,14 @@
-#VAULT-TEC SECURITY 
-#CYBER SECURITY PROJECT
-#INTERNSHIP #VScode
+### VAULT-TEC SECURITY 
+### CYBER SECURITY PROJECT
+### INTERNSHIP 
+### VScode
+### PYTHON
 
-Creating a Password generator with Python:
-  -Importing libraries
-  -Defining function with a return value
-  -Calling the defined function
+Creating a Password generator using four different Algorithm:
+  ### MD5 
+  ### SHA256 
+  ### HMAC
+  ### BCRYPT
 
 
   
