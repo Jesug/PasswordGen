@@ -16,7 +16,7 @@ def generate_random_salt():
     return secrets.token_hex(16)
 
 
-#FUNCTION FOR SHA256 HASH PASSWORD --- FIRST ALGORITHM
+#FUNCTION FOR SHA256 HASH --- FIRST ALGORITHM
 def generate_password_sha256 (gen_password, salt):
     h = hashlib.new("SHA256")
     h.update((gen_password + salt).encode())
@@ -24,14 +24,14 @@ def generate_password_sha256 (gen_password, salt):
     return hash_password
 
 
-#FUNCTION FOR MD5 HASH PASSWORD --- SECOND ALGORITHM
+#FUNCTION FOR MD5 HASH --- SECOND ALGORITHM
 def generate_password_md5 (gen_password, salt):
     hash = hashlib.new("md5")
     hash.update((gen_password + salt).encode())
     hashed = hash.hexdigest()
     return hashed
 
-#FUNCTION FOR HMAC HASH PASSWORD --- THIRD ALGORITHM
+#FUNCTION FOR HMAC HASH --- THIRD ALGORITHM
 def generate_password_hmac (gen_password, salt):
     gen_password = bytes(gen_password, "utf-8")
     salt = bytes(salt, "utf-8")
@@ -39,7 +39,7 @@ def generate_password_hmac (gen_password, salt):
     return dig.hexdigest()
 
 
-#FUNCTION FOR BCRYPT HASH PASSWORD --- FOURTH ALGORITHM
+#FUNCTION FOR BCRYPT HASH --- FOURTH ALGORITHM
 def generate_password_bcrypt (gen_password):
     salting = bcrypt.gensalt()
     hashed = bcrypt.hashpw(gen_password.encode('utf-8'), salting)
